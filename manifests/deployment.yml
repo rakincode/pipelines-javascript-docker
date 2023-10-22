@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: rakincodepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rakincodepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: rakincodepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: rakincodepipelinesjavascriptdocker 
+          image: mycontainerregistryra1021.azurecr.io/rakincodepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
